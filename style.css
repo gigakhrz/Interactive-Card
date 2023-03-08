@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Space Grotesk', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container{
+    background-color:#21092F;
+    width: 100%;
+    min-height: 240px;
+    position: relative;
+}
+
+.card-container p{
+    color: white;
+    font-size: 9px;
+    line-height: 11.5px;
+    letter-spacing: 1.3px;
+}
+
+.front-card{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    width: 285px;
+    height: 157px;
+    background-image: url(./images/bg-card-front.png);
+    background-size: 285px 157px;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    position: absolute;
+    top: 127px;
+    left: 17px;
+    padding: 19px 20px;
+    z-index: 10;
+}
+
+.card-icon{
+    width: 54px;
+    height: 30px;
+}
+
+.card-number{
+    color: white;
+    margin-top: 20px;
+}
+
+.card-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.back-card{
+    width: 285px;
+    height: 157px;
+    position: absolute;
+    background-image: url(./images/bg-card-back.png);
+    background-size: 285px 157px;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    top: 38px;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.cvc{
+    margin-right: 35px;
+}
+
+.input-container{
+    padding: 91px 24px 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 375px;
+}
+
+label{
+    font-size: 12px;
+    line-height: 15.3px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #21092F;
+    text-transform: uppercase;
+}
+
+input{
+    border: 1px solid #DFDEE0;
+    width: 327px;
+    height: 45px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+}
+
+::placeholder{
+    color: #21092F;
+    opacity: 25%;
+}
+
+.holder-input{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.number-input{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.datecvc{
+    display: flex;
+}
+
+.mmyy{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+#date{
+    width: 72px;
+    text-align: center;
+    width: 45%;
+}
+
+#year{
+    width: 72px;
+    text-align: center;
+    width: 45%;
+}
+
+.cvc-container{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+#cvc{
+    width: 164px;
+}
+
+.confirm{
+    border: 0;
+    background-color: #21092F;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 500;
+    width: 327px;
+    height: 53px;
+}
+
+.result-container{
+    display: flex;
+    flex-direction: column;
+    padding: 91px 24px 45px;
+    max-width: 375px;
+    align-items: center;
+    gap: 35px;
+    display: none;
+}
+
+.complete{
+    width: 80px;
+    height: 80px;
+}
+
+.text-container{
+    display: flex;
+    align-items: center;
+    flex-direction: 
+    column; gap: 16px;
+}
+
+.thank{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 3.422222137451172px;
+    color: #21092F;
+}
+
+.thank-p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #8F8694;
+}
+
+/* desktop version design */
+
+@media screen and (min-width:1024px) {
+
+    body{
+        flex-direction: row;
+    }
+
+    .card-container{
+        background-color: none;
+        width: 483px;
+        height: 100%;
+        background-image: url(./images/bg-main-desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .front-card{
+        width: 447px;
+        height: 245px;
+        background-size: cover;
+        top: 187px;
+        left: 106px;
+        gap: 26px;
+    }
+    
+    .back-card{
+        width: 447px;
+        height: 245px;
+        background-size: cover;
+        left: 200px;
+        top: 469px;
+        padding: 27px 32px;
+    }
+
+    .card-icon{
+        width: 84px;
+        height: 47px;
+    }
+
+    .card-number{
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 36px;
+        letter-spacing: 3.4px;
+        margin-top: 38px;
+    }
+
+    .card-container p{
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 2px;
+    }
+
+    .cvc{
+        margin-right: 20px;
+    }
+
+    .input-container{
+        gap: 26px;
+        max-width: 381px;
+        margin-left: 150px;
+    }
+
+    .result-container{
+        margin-left: 150px;
+    }
+
+    @media screen and (min-width:1200px) {
+        body{
+            gap: 350px;
+        }
+        
+        .front-card{
+            left: 164px;
+        }
+
+        .back-card{
+            left: 258px;
+        }
+
+        .input-container{
+            margin: 0;
+            max-width: 381px;
+            padding: 0;
+        }
+
+        input{
+            width: 381px;
+        }
+
+        .confirm{
+            width: 381px;
+        }
+    }
+}
