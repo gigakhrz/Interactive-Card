@@ -23,7 +23,10 @@
       <div class="card-info">
         <p class="holdername">Jane Appleseed</p>
 
-        <p class="expiration">00/00</p>
+        <div class="card-expiration">
+          <p class="expiration">00</p>
+          <p class="expiration-2">/00</p>
+        </div>
 
       </div>
     </div>
@@ -63,21 +66,27 @@
           oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
           minlength="2"
           maxlength="2">
+  
+
           <input type="number" name="year" id="year" placeholder="YY"
           oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
           minlength="2"
           maxlength="2">
           
         </div>
-
+        <div style="display: flex; gap: 25px;">
+          <p class="wrong-expiration">Can't be blank</p>
+          <p class="wrong-year">Can't be blank</p>
+        </div>
       </div>
 
       <div class="cvc-container">
         <label for="cvc">cvc</label>
         <input type="number" name="cvc" id="cvc" placeholder="e.g. 123"
-        oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+          oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
           minlength="3"
-          maxlength="3">
+        maxlength="3">
+        <p class="wrong-cvc">Should include 3 digits</p>
       </div>
 
     </div>
@@ -96,7 +105,7 @@
       <p class="thank-p">We’ve added your card details</p>
     </div>
 
-    <button class="confirm">continiu</button>
+    <button class="continue">continue</button>
 
   </section>
 
